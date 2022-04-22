@@ -37,6 +37,8 @@ const socialProvider={
 };
 
 import { ProductBuyComponent } from './product-buy/product-buy.component';
+import { CategoryproductComponent } from './categoryproduct/categoryproduct.component';
+import { SearchpageComponent } from './searchpage/searchpage.component';
 
 // const socialProvider={
 //   provide:"SocialAuthServiceConfig",
@@ -65,7 +67,9 @@ import { ProductBuyComponent } from './product-buy/product-buy.component';
     OrderComponent,
 
     ProductComponent,
-    ProductBuyComponent
+    ProductBuyComponent,
+    CategoryproductComponent,
+    SearchpageComponent
 
   ],
   imports: [

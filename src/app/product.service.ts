@@ -7,6 +7,7 @@ import { Observable, of } from 'rxjs';
 export class ProductService {
   viewProductUrl = "https://angularapi-api.herokuapp.com/api/product/product-list";
   cartUrl = "https://angularapi-api.herokuapp.com/api/cart/addtocart";
+  searchUrl="http://localhost:3000/api/search";
   public responseCache = new Map();
   constructor(private _http: HttpClient) {
   }
@@ -25,5 +26,8 @@ export class ProductService {
   addToCart(pId: any, uId: any): Observable<any> {
     console.log(pId + "+" + uId);
     return this._http.post(this.cartUrl, { userId: uId, productId: pId })
+  }
+  searchProduct(name:any):Observable<any>{
+   return this._http.post(this.searchUrl,{sname:name});
   }
 }

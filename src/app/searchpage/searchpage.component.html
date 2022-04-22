@@ -1,0 +1,33 @@
+<!-- <p>searchpage works!</p> -->
+<div class="container">
+    <div class="cat  justify-content-center">
+        <button class="btn justify-content-center mt-5">Your Results</button>
+    </div>
+    <div  class="row mt-4 cart image-fluid">
+        <div *ngFor="let product of productList" class="col-md-4 special-card">
+            <div class="card" style="width:350px">
+                <div>
+                    <!-- <img class="card-img-top" src="../../assets/images/product1 (1).jpg" alt="Card image"
+                        style="width:90%  "> -->
+                        <img (click)="productDesc(product._id)" class="card-img-top" src="{{product.productImageUrl}}" alt="Card image"
+                        style="width:90%">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">{{product.productName}}</h4>
+                    <p class="card-text">{{product.productDescription}}</p>
+                    <h4><img src="../../assets/images/rupees.png"width="30px" height="30px">  {{product.productPrice}}</h4>
+                   <img  (click)="addToCartHtml(product._id)" src="../../assets/images/cart.png"  width="30px" height="30px">
+                    <!-- <button  class="btn btn-danger" (click)="addToCartHtml(product._id)">AddToCart</button> -->
+             <!-- <button class="btn btn-danger" (click)="removeFromCartHtml(product._id)" style="width: 150px; height: 30px; font-size: 15px;">RemoveFromcart</button> -->
+                    <img src="../../assets/images/favorite.png" width="30px" height="30px">
+                    <!-- <a href="#" class="btn btn-primary">See Profile</a> -->
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cat  justify-content-center">
+        <button  class="button justify-content-center mt-5">See More</button>
+    </div>

@@ -44,10 +44,22 @@ export class ProductComponent implements OnInit {
    }
 
 
-
    addToCart(){
-  alert("ram ram")
-   }
+    if(localStorage.getItem('admin-id')){
+     console.log(localStorage.getItem('admin-id'))
+   this.productser.addToCart(this.pId,localStorage.getItem('admin-id')).subscribe(result=>{
+     if(result){
+       alert("added to cart");
+     }
+     else
+     alert("something went wrong...")
+   })
+}
+else{
+ this.routern.navigate(['signin'])
+}
+}
+   
 //    RazorPayment(){
 //     this.serve.createOrder(this.total).subscribe((result:any)=>{
 //       console.log(result);

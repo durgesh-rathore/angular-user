@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
 
 import { AuthGuard } from './auth.guard';
+import { CategoryproductComponent } from './categoryproduct/categoryproduct.component';
 import { ProductComponent } from './click-product/product.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { HomebackgroundComponent } from './homebackground/homebackground.component';
@@ -11,6 +12,7 @@ import { OrderComponent } from './order/order.component';
 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProductBuyComponent } from './product-buy/product-buy.component';
+import { SearchpageComponent } from './searchpage/searchpage.component';
 import { ShowCategoryComponent } from './show-category/show-category.component';
 import { TodaySpecialComponent } from './today-special/today-special.component';
 
@@ -21,6 +23,7 @@ import { ViewCartComponent } from './view-cart/view-cart.component';
 const routes: Routes = [
 // { path: 'home', component: ShowCateComponent},
 // { path: "signup", component: UserSignUpComponent },
+
  { path: "", component: HomebackgroundComponent },
 
 { path: "signin", component: UserSignInComponent },
@@ -33,7 +36,7 @@ const routes: Routes = [
   component: ViewCartComponent,
   //  canActivate:[AuthGuard]
 },
-
+{path:'searchproduct/:selement',component:SearchpageComponent},
 {path:'productBuy/:pId',component:ProductBuyComponent},
 
 {
@@ -55,6 +58,7 @@ const routes: Routes = [
   component:ViewCartComponent,
  canActivate:[AuthGuard]
 },
+{path:"categorywiseproduct/:cid",component:CategoryproductComponent},
  { path: "**", component: PageNotFoundComponent }
 ];
 

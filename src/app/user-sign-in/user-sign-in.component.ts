@@ -22,6 +22,7 @@ export class UserSignInComponent implements OnInit {
       if(result){
         console.log(result);
         localStorage.setItem('admin-id',result.current_user._id);
+        localStorage.setItem('emailuser',result.current_user.email);
         localStorage.setItem('token-jwt',result.token);
         alert("your login sucessfull");
         this.router.navigate(['home']);

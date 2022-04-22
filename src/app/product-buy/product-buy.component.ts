@@ -51,20 +51,20 @@ export class ProductBuyComponent implements OnInit {
         "key": "rzp_test_25KnYfoIcEzVyf", // Enter the Key ID generated from the Dashboard
         "amount": this.productPrice*this.productQty, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
         "currency": "INR",
-         "productId":this.pId,
-         "userId":localStorage.getItem('admin-id'),
         "name": this.productName,
         "description": "payment Transaction",
         // "image": "https://example.com/your_logo",
         "order_id": result.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-        "callback_url": "http://localhost:3000/order-status",
+        "callback_url": "http://localhost:3000/api/order/order-status",
         "prefill": {
             "UserName": this.userName,
-            "email": "gaurav.kumar@example.com",
+            "email": localStorage.getItem('emailuser'),
             "contact": this.mobile
         },
         "notes": {
-            "address": this.address
+            "address": this.address,
+            "productId":this.pId,
+            "userId":localStorage.getItem('admin-id'),
         },
         "theme": {
             "color": "#3399cc"
