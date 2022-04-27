@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class OrderService {
 
- placeOrderUrl="https://angularapi-api.herokuapp.com/api/order/orderplace"
- createOrderApi="http://localhost:3000/api/order/createorder";
+ placeOrderUrl="https://bookmymeal-api.herokuapp.com/api/order/orderplace"
+ createOrderApi="https://bookmymeal-api.herokuapp.com/api/order/createorder";
 //  createOrderAp="http://localhost:3000/api/order/createorder";
   constructor(private http:HttpClient) { }
   placeOrder( address:any,city:string,mobile:string, uId:any,productId:any):Observable<any>{

@@ -5,9 +5,9 @@ import { Observable, of } from 'rxjs';
 @Injectable(
 )
 export class ProductService {
-  viewProductUrl = "https://angularapi-api.herokuapp.com/api/product/product-list";
-  cartUrl = "https://angularapi-api.herokuapp.com/api/cart/addtocart";
-  searchUrl="http://localhost:3000/api/search";
+  viewProductUrl = "https://bookmymeal-api.herokuapp.com/api/product/product-list";
+  cartUrl = "https://bookmymeal-api.herokuapp.com/api/cart/addtocart";
+  searchUrl="https://bookmymeal-api.herokuapp.com/api/search";
   public responseCache = new Map();
   constructor(private _http: HttpClient) {
   }

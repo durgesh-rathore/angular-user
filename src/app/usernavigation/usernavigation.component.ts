@@ -9,7 +9,9 @@ import { UserService } from '../user.service';
 })
 export class UsernavigationComponent implements OnInit {
   selement:any="";
-  constructor(private router:Router,private _service:UserService) { }
+  constructor(private router:Router,private _service:UserService) { 
+    
+  }
   cheackTokenHtml(){
     return this._service.cheackToken();
   }

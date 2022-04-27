@@ -19,15 +19,19 @@ export class ViewCartComponent implements OnInit {
      })  
    }
 
-  removeFromCart(pId:any){
+  removeFromCart(pId:any,SNo:number){
+    let t=confirm("Are you sure");
+    if(t){
     this.cart.removeFromCart(pId,localStorage.getItem('admin-id')).subscribe(result=>{
-      if(result)
+      if(result){
       alert("deleted succesfully");
-        
+        this.cartList.splice(SNo,1)
+      }
       else 
       alert('some thing went wrong');
     })
   }
+}
   placeOrder(){
     this.router.navigate(['place-order',localStorage.getItem('admin-id')])
   }

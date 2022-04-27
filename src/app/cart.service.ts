@@ -6,8 +6,8 @@ import { Observable,of } from 'rxjs';
   providedIn: 'root'
 })
 export class CartService {
-  viewCartUrl = "https://angularapi-api.herokuapp.com/api/cart/viewcart"
-  removeFromeCartUrl = "https://angularapi-api.herokuapp.com/api/cart/removefromcart"
+  viewCartUrl = "https://bookmymeal-api.herokuapp.com/api/cart/viewcart"
+  removeFromeCartUrl = "https://bookmymeal-api.herokuapp.com/api/cart/removefromcart"
   // public responseCache = new Map();
   
   constructor(private _http: HttpClient) { }
