@@ -4,8 +4,8 @@ import {HttpClient} from '@angular/common/http'
 import { Observable } from 'rxjs';
 @Injectable()
 export class UserService {
-apiUrl="https://bookmymeal-api.herokuapp.com/api/admin/signup";
-apiUrlin="https://bookmymeal-api.herokuapp.com/api/admin/signin";
+apiUrl="http://localhost:3000/api/admin/signup";
+apiUrlin="http://localhost:3000/api/admin/signin";
   constructor(private Uhttp:HttpClient) {  }
   userapiservice(e:string,p:string):Observable<any>{
     return this.Uhttp.post(this.apiUrl,{email:e,password:p})

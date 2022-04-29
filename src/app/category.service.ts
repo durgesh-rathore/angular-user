@@ -6,7 +6,7 @@ import { Form } from '@angular/forms';
 @Injectable()
 export class CategoryService {
   
-   viewCategory="https://bookmymeal-api.herokuapp.com/api/category/category-list";
+   viewCategory="http://localhost:3000/api/category/category-list";
   
    public responseCache = new Map();
 

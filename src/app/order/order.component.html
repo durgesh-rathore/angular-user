@@ -22,11 +22,14 @@
           <td>{{product.productDiscount}}</td>
           <td>{{product.productDescription}}</td>
           <td>{{product.productPrice}}</td>
-          <td><input type="text" class="form-control" placeholder="Enter the Qty" name="productQty" id=""></td>
-          <td>{{productQty*product.productPrice}}</td>
+          <td><input type="number" class="form-control" placeholder="1" min="1"  (change)="QtyInput($event,SNo)" name="productQty" id=""></td>
+          <td>{{product.perTotal}}</td>
       </tr>
   </tbody>
 </table>
+<div>
+    {{grandTotal}}
+</div>
 
 
  <div class="container">
